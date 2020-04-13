@@ -4,8 +4,6 @@ Simple yet customizable modal for Avalonia. Show modal to the Avalonia's main wi
 ![Modalonia](https://i.ibb.co/Vjn6HF8/modalonia.gif "Modalonia")
 
 ## Basic usage
-Make sure the first child element of your main window is grid, other panel type like `StackPanel` is not supported.
-
 ```csharp
 // you can attach any control as a modal's content..
 var content =  new TextBlock
@@ -33,7 +31,7 @@ Add default style to your App.xaml file;
 - Grid.modalonia_container
 - Border.modalonia_border
 - ContentControl.modalonia_header
-- BextBlock.modalonia_header_title
+- TextBlock.modalonia_header_title
 - Button.modalonia_header_close
 - ContentControl.modalonia_content
 - ContentControl.modalonia_buttons_container
