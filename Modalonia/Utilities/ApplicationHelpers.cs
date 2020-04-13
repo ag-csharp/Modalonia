@@ -10,12 +10,14 @@ namespace Modalonia.Utilities
     {
         public static Window GetMainWindow()
         {
-            return Application.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop ? desktop.MainWindow : null;
+            return Application.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop
+                ? desktop.MainWindow
+                : null;
         }
 
         public static Panel GetMainPanel()
         {
-            return (Panel) GetMainWindow().GetLogicalChildren().FirstOrDefault();
+            return GetMainWindow().GetLogicalChildren().FirstOrDefault() is Panel panel ? panel : null;
         }
     }
 }
