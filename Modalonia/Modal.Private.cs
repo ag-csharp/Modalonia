@@ -32,7 +32,7 @@ namespace Modalonia
                 _open = true;
 
                 // this will make UI responsive
-                while (panel.Children.Contains(ModalView)) await Task.Delay(100);
+                while (_open) await Task.Delay(100);
             });
         }
     }
