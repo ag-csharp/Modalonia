@@ -24,7 +24,7 @@
                   <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="{Binding ModalTitle}" Classes="modalonia_header_title"/>
-                <Button Grid.Column="1" Classes="modalonia_header_close" Command="{Binding CloseCommand}"/>
+                <Button Grid.Column="1" Classes="modalonia_header_close" HotKey="Escape" Command="{Binding CloseCommand}"/>
               </Grid>
             </ContentControl>
             <ContentControl Content="{Binding ModalContent}" Classes="modalonia_content"/>

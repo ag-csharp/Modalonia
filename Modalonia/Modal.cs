@@ -54,7 +54,7 @@ namespace Modalonia
         {
             if (!_open) return;
 
-            ModalAttacher.Detach(ModalView);
+            Dispatcher.UIThread.Post(() => ModalAttacher.Detach(ModalView));
             _open = false;
         }
 
