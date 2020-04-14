@@ -13,7 +13,7 @@ namespace Modalonia
         public static void Attach(ModalView modalView)
         {
             var window = ApplicationHelpers.GetMainWindow();
-            var firstChild = ApplicationHelpers.GetMainWindow().GetLogicalChildren().FirstOrDefault();
+            var firstChild = window.GetLogicalChildren().FirstOrDefault();
 
             if (firstChild is Grid grid)
             {
@@ -37,7 +37,7 @@ namespace Modalonia
         public static void Detach(ModalView view)
         {
             var window = ApplicationHelpers.GetMainWindow();
-            var grid = (Grid) ApplicationHelpers.GetMainWindow().GetLogicalChildren().FirstOrDefault();
+            var grid = (Grid) window.GetLogicalChildren().FirstOrDefault();
             
             grid?.Children.Remove(view);
 
